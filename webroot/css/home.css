@@ -1,0 +1,177 @@
+
+.chathome{
+	display: flex;
+}
+/* 　サイドバー　 */
+.sidebar {
+	display: flex;
+	flex: 0.3; 
+	height: 100vh;
+}
+/* 　左サイドバー　 */
+.sidebarleft {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 7px 15px;
+	background-color: #1a1c20;
+}
+
+.serverIcon {
+	width: 60px;
+	height: 60px;
+	background-color: gray;
+	border-radius: 9999px;
+	margin-bottom: 10px;
+	position: relative;
+	margin-top: 7px;
+}
+
+.serverIcon img {
+	position: absolute;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+/* 　右サイドバー　 */
+.sidebarright {
+	background-color: #2b2d33;
+	width: 300px;
+	/* position: relative; */
+	flex-grow: 1;
+}
+
+
+.sidebartop {
+	color: #fff;
+	display: flex;
+	/* align-items: center; */
+	/* justify-content: space-between; */
+	padding: 20px;
+}
+
+.sidebarchannels {
+	padding: 13px;
+}
+
+.sidebarchannlesheader {
+	color: white;
+	margin-top: 5px;
+	/* display: flex; */
+	/* align-items: center;
+	justify-content: space-between; */
+
+}
+
+
+.sidebarchannel {
+	padding-left: 10px;
+	margin-top: 2px;
+}
+
+.sidebarchannelhash {
+	font-size: 22px;
+	padding-right: 10px;
+}
+
+.sidebarchannel h4 {
+	color: #7b7c85;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	font-size: 1.1rem;
+	cursor: pointer;
+
+	&:hover {
+		color: white;
+		background-color: #33363d;
+		border-radius: 7px;
+	}
+}
+
+
+
+
+
+
+/* 　チャット　 */
+.chat {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	background-color: #33363d;
+}
+
+.chatheader {
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: space-between; */
+	width: 100%;
+	padding-top: 10px;
+}
+
+.chatheaderhash {
+	color: #7b7c85;
+	padding-right: 7px;
+}
+
+.chatheaderleft {
+	padding-left: 15px;
+}
+
+.chatheaderleft h3 {
+	color: white;
+}
+
+
+/* 　チャットメッセージ　 */
+.chatmessage {
+	flex-grow: 1;
+}
+.message {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	color: white;
+}
+.messageinfo {
+	padding: 20px 20px 20px 10px;
+}
+
+.messagetimestamp {
+	color: #7b7c85;
+	margin-left: 20px;
+	font-size: 16px;
+}
+
+
+
+.chatinput	{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	background-color: #474b53;
+	border-radius: 5px;
+	margin: 20px;
+	color: lightgray;
+}
+
+form {
+	flex-grow: 1;
+}
+input {
+	padding: 15px;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: large;
+	width: 100%;
+}
+
+.chatinputbutton {
+	display: none;
+}
