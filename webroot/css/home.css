@@ -5,19 +5,23 @@
 /* 　サイドバー　 */
 .sidebar {
 	display: flex;
-	flex: 0.3; 
+	flex: 0.4; 
 	height: 100vh;
-}
-/* 　左サイドバー　 */
-.sidebarleft {
-	display: flex;
 	flex-direction: column;
-	align-items: center;
-	padding: 7px 15px;
 	background-color: #1a1c20;
+	padding: 7px 15px;
+}
+.user {
+	display: flex;
+}
+.name {
+	margin-left: 25px;
+	margin-top: 25px;
+	color: white;
 }
 
 .serverIcon {
+	display: flex;
 	width: 60px;
 	height: 60px;
 	background-color: gray;

@@ -13,45 +13,34 @@ use Cake\Http\Exception\NotFoundException;
 
     <!-- サイドバー -->
     <div class="sidebar">
-        <!-- sidebarLeft -->
-        <div class='sidebarleft'>
-            <div class='serverIcon'>
-                <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
-                </div>
-            <div class='serverIcon'>
-                <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
-            </div>
-        </div>
-
-        <!-- sidebarRight -->
-        <div class='sidebarright'>
-
             <!-- サイドバートップ --> 
             <div class='sidebartop'>
-                <h3>Dicord</h3>
+                <h3>ユーザー</h3>
             </div>
 
-            <!-- サイドバーチャンネル -->
-            <div class='sidebarchannels'>
-                <div class='sidebarchannlesheader'>
-                    <h4>プログラミングチャンネル</h4>
+            <div class="user">
+                <div class='serverIcon'>
+                    <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
                 </div>
-                <div class='sidebarchannellist'>
+                <h3 class="name">名前１</h3>
+            </div>
 
-                    <div class='sidebarchannel'>
-                        <h4>
-                            <span class='sidebarchannelhash'>#</span>
-                            Udemy
-                        </h4>
-                    </div>
-
+            <div class="user">
+                <div class='serverIcon'>
+                    <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
                 </div>
+                <h3 class="name">名前１</h3>
+            </div>
 
-
+            <div class="user">
+                <div class='serverIcon'>
+                    <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
+                </div>
+                <h3 class="name">名前１</h3>
             </div>
 
 
-        </div>
+
     </div>
 
     <!-- メインチャット画面 -->
@@ -92,8 +81,6 @@ use Cake\Http\Exception\NotFoundException;
         </div>
 
     </div>
-
-
 </div>
 
 
