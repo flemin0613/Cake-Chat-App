@@ -21,7 +21,16 @@ class HomeController extends AppController
     {
         // モジュール読み込み
         $this->loadComponent('Common');
-        
+        $session = $this->getRequest()->getSession();
+
+        // ログインユーザーを取得
+        $login_user = $this->Common->get_login_user('1',$_POST['email'],$_POST['password']);
+
+        // 法人ID・ユーザーIDをセッション領域に格納する
+        $session->write('hojin_id', $login_user->KEIYAKU_CODE);
+        $session->write('user_id', $login_user->USER_ID);
+
+        // 全ユーザー取得
         $user = $this->Common->get_user('1');
 
         $this->set('user', $user);
