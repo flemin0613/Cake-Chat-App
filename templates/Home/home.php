@@ -18,28 +18,17 @@ use Cake\Http\Exception\NotFoundException;
                 <h3>ユーザー</h3>
             </div>
 
-            <div class="user">
-                <div class='serverIcon'>
-                    <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
+            <!-- ユーザー一覧 -->
+            <?php foreach($user as $obj): ?>
+
+                <div class="user">
+                    <div class='serverIcon'>
+                        <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
+                    </div>
+                    <h3 class="name"><?= h($obj->SEI); ?> <?= h($obj->MEI); ?></h3>
                 </div>
-                <h3 class="name">名前１</h3>
-            </div>
 
-            <div class="user">
-                <div class='serverIcon'>
-                    <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
-                </div>
-                <h3 class="name">名前１</h3>
-            </div>
-
-            <div class="user">
-                <div class='serverIcon'>
-                    <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
-                </div>
-                <h3 class="name">名前１</h3>
-            </div>
-
-
+            <?php endforeach; ?>
 
     </div>
 

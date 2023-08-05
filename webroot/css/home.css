@@ -13,6 +13,7 @@
 }
 .user {
 	display: flex;
+	cursor: pointer;
 }
 .name {
 	margin-left: 25px;
