@@ -12,7 +12,7 @@ use Cake\Http\Exception\NotFoundException;
 <div class="login-container">
 	<h1 class="login-title">Member Login</h1>
 
-	<?= $this->Form->create(null, ['url' => ['controller' => 'Home', 'action' => 'home'], 'method' => 'post']); ?>
+	<?= $this->Form->create(null, ['url' => ['controller' => 'Home', 'action' => 'chat'], 'method' => 'post']); ?>
 
 		<!-- メールアドレス -->
 		<div class="input-group">
@@ -27,5 +27,6 @@ use Cake\Http\Exception\NotFoundException;
 		</div>
 
 		<button type="submit" class="login-btn">Login</button>
+		<input type="hidden" name="_csrfToken" autocomplete="off" value="<?= $this->request->getAttribute('csrfToken') ?>">
 	<?= $this->Form->end() ?>
 </div>

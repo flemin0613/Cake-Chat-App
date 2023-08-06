@@ -13,6 +13,8 @@
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <?= $this->Html->script('jquery-3.7.0.min.js') ?>
 </head>
 <body></body>
     <main class="main">
