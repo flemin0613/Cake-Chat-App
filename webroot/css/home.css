@@ -5,11 +5,11 @@
 /* 　サイドバー　 */
 .sidebar {
 	display: flex;
-	flex: 0.4; 
+	flex: 0.25; 
 	height: 100vh;
 	flex-direction: column;
 	background-color: #1a1c20;
-	padding: 7px 15px;
+	/* padding: 7px 15px; */
 }
 .user {
 	display: flex;
@@ -107,6 +107,8 @@
 	flex-direction: column;
 	flex-grow: 1;
 	background-color: #33363d;
+	height: 100vh;
+
 }
 
 .chatheader {
@@ -133,7 +135,8 @@
 
 /* 　チャットメッセージ　 */
 .chatmessage {
-	flex-grow: 1;
+	height: 100vh;
+	overflow-y: scroll;
 }
 .message {
 	display: flex;
