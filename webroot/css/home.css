@@ -5,7 +5,8 @@
 /* 　サイドバー　 */
 .sidebar {
 	display: flex;
-	flex: 0.25; 
+	/* flex: 0.25;  */
+	width: 320px;
 	height: 100vh;
 	flex-direction: column;
 	background-color: #1a1c20;
@@ -41,12 +42,12 @@
 }
 
 /* 　右サイドバー　 */
-.sidebarright {
+/* .sidebarright {
 	background-color: #2b2d33;
 	width: 300px;
 	/* position: relative; */
-	flex-grow: 1;
-}
+	/* flex-grow: 1; */
+/* } */ 
 
 
 .sidebartop {
@@ -104,8 +105,9 @@
 /* 　チャット　 */
 .chat {
 	display: flex;
+	width: 1600px;
 	flex-direction: column;
-	flex-grow: 1;
+	/* flex-grow: 1; */
 	background-color: #33363d;
 	height: 100vh;
 

@@ -26,10 +26,19 @@ use Cake\Http\Exception\NotFoundException;
                         <div class='serverIcon'>
                             <?= $this->Html->image('logo192.png', ['alt' => 'サンプル画像']) ?>
                         </div>
-                        <h3 class="name"><?= h($obj->SEI); ?> <?= h($obj->MEI); ?></h3>
+
+                        <?php if($obj->LOGIN_FLG == "1"){?>
+                            <h3 class="name">マイページ</h3>
+                        <?php }else{?>
+                            <h3 class="name"><?= h($obj->SEI); ?> <?= h($obj->MEI); ?></h3>
+
+                        <?php }?>
+
+                        
                     </div>
                 </a>
             <?php endforeach; ?>
+
     </div>
 
     <!-- メインチャット画面 -->
@@ -66,17 +75,18 @@ use Cake\Http\Exception\NotFoundException;
 
         <!-- チャット入力 -->
         <!-- チャット送信はAjaxで実行 -->
-        <div class='chatinput'>
-            <form onsubmit="return sendMessage(event)">
-                <input type="text" id="input" placeholder='メッセージを送信' value=""/>
-                <button type="submit" class='chatinputbutton'>
-                送信
-                </button>
-                <?= $this->Form->hidden('user_id', ['value' => $user_id]) ?>
-                <?= $this->Form->hidden('room_id', ['value' => $room_id,'id' => 'send_room_id']) ?>
-            </form>
-        </div>
-
+        <?php if($input_chat_flg != 0){ ?>
+            <div class='chatinput'>
+                <form onsubmit="return sendMessage(event)">
+                    <input type="text" id="input" placeholder='メッセージを送信' value=""/>
+                    <button type="submit" class='chatinputbutton'>
+                    送信
+                    </button>
+                    <?= $this->Form->hidden('user_id', ['value' => $user_id,'id' => 'receive_user_id']) ?>
+                    <?= $this->Form->hidden('room_id', ['value' => $room_id,'id' => 'send_room_id']) ?>
+                </form>
+            </div>
+        <?php }?>
     </div>
 </div>
 <input type="hidden" class="csrfToken" name="_csrfToken" autocomplete="off" value="<?= $this->request->getAttribute('csrfToken') ?>">

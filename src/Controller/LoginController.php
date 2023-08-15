@@ -12,6 +12,10 @@ class LoginController extends AppController
 {	
     public function login()	
     {	
+        // セッション削除
+        $session = $this->getRequest()->getSession();
+        $session->destroy();
+
         $this->render('login');	
     }	
 }	

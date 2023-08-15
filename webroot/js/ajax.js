@@ -59,6 +59,7 @@ function sendMessage(e) {
 
 		var inputValue = $("#input").val();
 		var room_id = $("#send_room_id").val();
+		var receive_user_id = $("#receive_user_id").val();
 
 		$.ajax({
 			url: '/ajax/sendmessage', // Ajaxリクエストを処理するURL
@@ -69,6 +70,7 @@ function sendMessage(e) {
 			},
 			data : {
 			  room_id : room_id, 
+			  receive_user_id: receive_user_id,
 			  message : inputValue, 
 			},
 			success: function(response) {
